@@ -1,0 +1,17 @@
+{
+    "name": "shadowinek/aoc2022",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Shadowinek\\Aoc2022\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Milan Beran",
+            "email": "milan.beran@gmail.com"
+        }
+    ],
+    "require": {}
+}
