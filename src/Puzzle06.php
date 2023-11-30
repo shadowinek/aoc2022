@@ -4,7 +4,7 @@ namespace Shadowinek\Aoc2022;
 
 class Puzzle06 extends AbstractPuzzle
 {
-    private array $chars;
+    private array $chars = [];
 
     public function runPart01(): int
     {

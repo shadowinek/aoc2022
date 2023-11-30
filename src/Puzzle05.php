@@ -2,16 +2,10 @@
 
 namespace Shadowinek\Aoc2022;
 
-class Puzzle05
+class Puzzle05 extends AbstractPuzzle
 {
     private array $stacks = [];
     private array $steps = [];
-    private array $data;
-
-    public function __construct(array $data)
-    {
-        $this->data = $data;
-    }
 
     public function runPart01(): string
     {
