@@ -43,7 +43,13 @@ class Puzzle11 extends AbstractPuzzle
     {
         $this->loadData();
 
-        for ($i=0;$i<20;$i++) {
+        $modulo = 1;
+
+        foreach ($this->monkes as $monke) {
+            $modulo *= $monke->divisible;
+        }
+
+        for ($i=0;$i<10000;$i++) {
             foreach ($this->monkes as $monke) {
                 while ($item = array_shift($monke->items)) {
 
@@ -55,14 +61,12 @@ class Puzzle11 extends AbstractPuzzle
                         $newMonke = $monke->false;
                     }
 
-                    $this->monkes[$newMonke]->items[] = $newItem;
+                    $this->monkes[$newMonke]->items[] = $newItem % $modulo;
 
                     $this->inspected[$monke->number]++;
                 }
             }
         }
-
-        print_r($this->inspected);
 
         rsort($this->inspected);
 
