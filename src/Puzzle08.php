@@ -35,8 +35,6 @@ class Puzzle08 extends AbstractPuzzle
             }
         }
 
-        print_r($this->scenicScore);
-
         return max($this->scenicScore);
     }
 
