@@ -73,7 +73,7 @@ class Puzzle11 extends AbstractPuzzle
         return $this->inspected[0] * $this->inspected[1];
     }
 
-    public function loadData(): void
+    private function loadData(): void
     {
         foreach ($this->data as $data) {
             $data = trim($data);
